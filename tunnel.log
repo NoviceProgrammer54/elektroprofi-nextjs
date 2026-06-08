@@ -1,0 +1,7 @@
+﻿[06/08/2026 09:43:44] ===== Starting ELEKTROPROFI Next.js (PRODUCTION) =====
+[06/08/2026 09:43:47] Starting Next.js production server on port 3000...
+[06/08/2026 09:43:47] Next.js PID: 13228
+[06/08/2026 09:43:49] Production server ready!
+[06/08/2026 09:43:49] Starting cloudflared -> http://localhost:3000...
+[06/08/2026 09:43:49] cloudflared PID: 10676
+[06/08/2026 09:43:55] Tunnel URL: https://duke-treatment-sleep-sites.trycloudflare.com
