@@ -5,7 +5,7 @@ import { useWorkshop } from '@/hooks/useWorkshop';
 import { useLang, useTT } from '@/lib/i18n/useT';
 
 export default function WorkshopPage() {
-  const { categories, articles } = useWorkshop();
+  const { categories, articles, loading } = useWorkshop();
   const lang = useLang();
   const tt = useTT();
   const byCategory = useMemo(()=>{
@@ -37,7 +37,8 @@ export default function WorkshopPage() {
           <div className="space-y-6">{media.map(cat=><WorkshopSlider key={cat.id} category={cat} articles={byCategory.get(cat.id)??[]} />)}</div>
         </section>
       )}
-      {categories.length===0&&<p className="text-muted-foreground">{tt('Материалы скоро появятся.')}</p>}
+      {loading&&<p className="text-muted-foreground">{tt('Загрузка…')}</p>}
+      {!loading&&categories.length===0&&<p className="text-muted-foreground">{tt('Материалы скоро появятся.')}</p>}
     </div>
   );
 }
