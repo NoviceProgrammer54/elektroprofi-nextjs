@@ -42,7 +42,7 @@ export default function RootLayout({
   return (
     <html
       lang="ru"
-      className={`${inter.variable} ${oswald.variable} dark`}
+      className={`${inter.variable} ${oswald.variable}`}
     >
       <body className="min-h-screen flex flex-col antialiased">
         <SiteBackground />
